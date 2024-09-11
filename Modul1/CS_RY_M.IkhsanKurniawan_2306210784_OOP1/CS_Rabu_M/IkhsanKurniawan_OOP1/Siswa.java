@@ -1,5 +1,7 @@
 package CS_Rabu_M.IkhsanKurniawan_OOP1;
 
+ 
+
 
 public class Siswa
 {

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FullTimeEmployee
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FullTimeEmployee\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=name\ id\ position\ division\ baseSalary\ baseBonus\ performanceRating
+comment1.target=FullTimeEmployee(java.lang.String,\ int,\ Position,\ Division,\ double,\ double,\ double)
+comment2.params=
+comment2.target=double\ bonusSalary()
+comment3.params=
+comment3.target=double\ totalSalary()
+comment4.params=
+comment4.target=void\ displayInfo()
+numComments=5
