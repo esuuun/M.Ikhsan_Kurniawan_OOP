@@ -3,7 +3,7 @@ package com.IkhsanKurniawanJPlane;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "planes")
+@Table(name = "tickets")
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Ticket {
     @JoinColumn(name = "plane_id", nullable = false)
     private Plane plane;
 
-    @JoinColumn(name = "code", nullable = false)
+    @Column(name = "code", nullable = false)
     private String code;
 
     public Ticket(Account buyer, Plane plane, String code){

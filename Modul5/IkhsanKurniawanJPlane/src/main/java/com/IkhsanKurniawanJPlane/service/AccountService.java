@@ -23,8 +23,14 @@ public class AccountService {
     }
 
     public Account topUpBalance(Long accountId, String username, String password, int amount){
-        Account account = accountRepository.findById(accountId))
-        ;
+        Account admin = accountRepository.findById(accountId).orElseThrow(() -> new RuntimeException("Ticket not found"));
 
+        if(admin.getUsername().equals(username) && admin.getPassword().equals(password)){
+            admin.setBalance(admin.getBalance() + amount);
+            accountRepository.save(admin);
+            return admin;
+        }else {
+            throw new RuntimeException("Invalid username or password");
+        }
     }
 }
