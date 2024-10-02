@@ -13,7 +13,7 @@ public class MovieCollection extends LibraryCollection<Movie> {
     }
 
     public Map<String,Movie> findByDirector(String director){
-        return super.getItem(director);
+        return getAllItems().entrySet().stream().filter(entry -> entry.getValue().director.toLowerCase().contains(director.toLowerCase())).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
     }
     public Map<String,Movie> findByYear(int year){
         return getAllItems().entrySet().stream().filter(entry -> entry.getValue().year.contains(year)).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
