@@ -8,7 +8,6 @@ public class Topology {
         builder.setDeviceName(deviceName);
         builder.setIpV4(ipV4);
         builder.setMacAddress(NetworkDevice.randomMACAddress());
-
     }
 
     public void addSwitch(NetworkDeviceBuilder builder,String deviceName, String macAddress, int vlan){
